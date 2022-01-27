@@ -1,6 +1,10 @@
 server:
   port: 8888
 
+server-resource:
+  url-prefix: /attachment/
+  attachment-path-prefix: /root/server-deploy/approval-server/attachment/
+
 spring:
 
   jpa:
