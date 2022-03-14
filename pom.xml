@@ -10,7 +10,7 @@
     </parent>
     <groupId>pers.chris</groupId>
     <artifactId>spring-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <name>spring-demo</name>
     <description>spring-demo</description>
     <properties>
@@ -18,6 +18,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <swagger.version>3.0.0</swagger.version>
         <springfox.version>3.0.0</springfox.version>
+        <lombok.version>1.18.22</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <spring-boot-maven-plugin.version>2.3.12.RELEASE</spring-boot-maven-plugin.version>
         <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
@@ -63,6 +64,11 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
             <version>${springfox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
@@ -114,5 +120,4 @@
             </properties>
         </profile>
     </profiles>
-
 </project>

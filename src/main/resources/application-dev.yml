@@ -1,11 +1,27 @@
 server:
   port: 8888
 
-server-resource:
-  url-prefix: /attachment/
-  attachment-path-prefix: D:/Attachment/
+logging:
+  level:
+    root: info
+  file:
+    path: log
+    name: ${logging.file.path}/sanming-logger.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
 
 spring:
+  jackson:
+    # 时间序列化
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    # 空字符串、null值均保留序列化
+    default-property-inclusion: use_defaults
+  # 文件上传大小
+  servlet.multipart:
+    max-file-size: 100MB
+    max-request-size: 100MB
   jpa:
     database: postgresql
     hibernate.ddl-auto: update
