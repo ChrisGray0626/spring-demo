@@ -4,7 +4,6 @@ import lombok.Data;
 import pers.chris.springdemo.common.base.BaseDO;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity

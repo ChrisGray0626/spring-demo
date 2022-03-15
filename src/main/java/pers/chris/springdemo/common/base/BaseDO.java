@@ -14,6 +14,11 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+/**
+ * @Author Chris
+ * @Date 2022/3/10 1:19 PM
+ * @Description 通用DO
+ */
 @Data
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)

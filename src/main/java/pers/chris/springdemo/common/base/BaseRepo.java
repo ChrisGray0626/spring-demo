@@ -11,6 +11,7 @@ import javax.transaction.Transactional;
 /**
  * @Author Chris
  * @Date 2022/3/7 10:34 AM
+ * @Description 通用Repository
  */
 @NoRepositoryBean
 public interface BaseRepo<T extends BaseDO> extends JpaRepository<T, String>, JpaSpecificationExecutor<T> {

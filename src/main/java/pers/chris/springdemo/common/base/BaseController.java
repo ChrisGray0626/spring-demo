@@ -5,8 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pers.chris.springdemo.common.response.Response;
 
-import java.util.List;
-
 /**
  * @Author Chris
  * @Date 2022/3/10 1:19 PM

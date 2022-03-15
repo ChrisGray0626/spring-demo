@@ -3,6 +3,7 @@ package pers.chris.springdemo.common.response;
 /**
  * @Author Chris
  * @Date 2022/3/2 4:19 PM
+ * @Description 返回值类型
  */
 public enum ResponseStatusEnum {
 

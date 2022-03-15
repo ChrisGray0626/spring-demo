@@ -1,29 +1,24 @@
 package pers.chris.springdemo.common;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.extern.slf4j.Slf4j;
-
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import pers.chris.springdemo.common.exception.DemoException;
 import pers.chris.springdemo.common.response.Response;
-
-import java.io.IOException;
 
 
 /**
- * @author CheshireEZ
+ * @Author Chris
+ * @Date 2022/3/10 1:19 PM
+ * @Description 统一异常处理
  */
 @Slf4j
 @RestControllerAdvice
 public class ResponseExceptionHandler {
 
-    private final ObjectMapper objectMapper = new ObjectMapper();
-
-    @ExceptionHandler(Exception.class)
-    public Response handle(Exception e) {
-        String message = "用户未登录，请先登录！";
+    @ExceptionHandler(DemoException.class)
+    public Response handle(DemoException e) {
+        String message = e.getMessage();
         log.warn(message);
         return Response.error(message);
     }

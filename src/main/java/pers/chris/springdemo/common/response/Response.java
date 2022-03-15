@@ -2,6 +2,12 @@ package pers.chris.springdemo.common.response;
 
 import lombok.Data;
 
+/**
+ * @Author Chris
+ * @Date 2022/3/10 1:19 PM
+ * @Description 统一返回类
+ */
+
 @Data
 public class Response {
     private String code;

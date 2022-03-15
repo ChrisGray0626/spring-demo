@@ -6,15 +6,19 @@ import org.springframework.lang.NonNull;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * @Author Chris
+ * @Date 2022/3/10 1:19 PM
+ * @Description 静态资源映射
+ */
 @Configuration
-public class WebMvcConfig implements WebMvcConfigurer {
+public class ResourceHandlerConfigurer implements WebMvcConfigurer {
 
-    @Value("${server-resource.url-prefix}")
+    @Value("${resource.url-prefix}")
     private String urlPrefix;
-    @Value("${server-resource.attachment-path-prefix}")
+    @Value("${resource.attachment-path-prefix}")
     private String pathPrefix;
 
-    //静态资源映射
     @Override
     public void addResourceHandlers(@NonNull ResourceHandlerRegistry registry) {
         try {
