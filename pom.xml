@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>pers.chris</groupId>
-    <artifactId>spring-demo</artifactId>
+    <artifactId>spring-template</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <name>spring-demo</name>
-    <description>spring-demo</description>
+    <name>spring-template</name>
+    <description>spring-template</description>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -22,6 +22,7 @@
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <spring-boot-maven-plugin.version>2.3.12.RELEASE</spring-boot-maven-plugin.version>
         <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -93,6 +94,25 @@
                         <delimiter>$</delimiter>
                     </delimiters>
                     <useDefaultDelimiters>false</useDefaultDelimiters>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
         </plugins>

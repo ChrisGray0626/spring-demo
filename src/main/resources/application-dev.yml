@@ -1,19 +1,10 @@
 server:
   port: 8888
 
+# 静态资源映射
 resource:
   url-prefix:
-  attachment-path-prefix:
-
-logging:
-  level:
-    root: info
-  file:
-    path: log
-    name: ${logging.file.path}/logger.log
-  logback:
-    rollingpolicy:
-      max-file-size: 10MB
+  path-prefix:
 
 spring:
   jackson:
@@ -35,3 +26,13 @@ spring:
     url: jdbc:postgresql://
     username:
     password:
+
+logging:
+  level:
+    root: info
+  file:
+    path: log
+    name: ${logging.file.path}/logger.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
