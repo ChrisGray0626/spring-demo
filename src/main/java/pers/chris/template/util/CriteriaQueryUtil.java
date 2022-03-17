@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @Author Chris
  * @Date 2022/3/16 5:27 PM
- * @Description
+ * @Description 条件查询工具
  */
 public class CriteriaQueryUtil {
 
