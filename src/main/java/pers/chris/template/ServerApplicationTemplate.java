@@ -27,7 +27,7 @@ public class ServerApplicationTemplate {
                 "\n----------------------------------------------------------\n" +
                         "Application '{}' is running! Access URLs:\n" +
                         "Local-API: \t\t http://127.0.0.1:{}\n" +
-                        "External-API: \t http://{}:{}\n" +
+                        "External-API: \t \t http://{}:{}\n" +
                         "\n----------------------------------------------------------",
                 applicationName, path, externalAPI, path);
     }

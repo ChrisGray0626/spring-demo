@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #!/bin/sh
 # 设置jar包
-RESOURCE_NAME=sanming-planning-server-1.0-SNAPSHOT.jar
+RESOURCE_NAME=xx-1.0-SNAPSHOT.jar
 # 查询当前进程号
 pid=`ps -ef|grep $RESOURCE_NAME|grep -v grep|grep -v kill|awk '{print $2}'`
 if [ ${pid} ]; then
