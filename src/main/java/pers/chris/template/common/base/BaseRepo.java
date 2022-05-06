@@ -5,8 +5,8 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.NoRepositoryBean;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 
 /**
  * @Author Chris
@@ -17,17 +17,17 @@ import javax.transaction.Transactional;
 public interface BaseRepo<T extends BaseDO> extends JpaRepository<T, String>, JpaSpecificationExecutor<T> {
 
     @Query("update #{#entityName} e set e.deleted = 1 where e.id = ?1")
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     @Modifying
     void deleteLogically(String id);
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     default void deleteLogically(T entity) {
         deleteLogically(entity.getId());
     }
 
     @Query("update #{#entityName} e set e.deleted = 1 ")
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     @Modifying
     void logicDeleteAll();
 }

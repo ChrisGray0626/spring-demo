@@ -3,7 +3,7 @@ package pers.chris.template.util.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import pers.chris.template.pojo.DOTemplate;
+import pers.chris.template.pojo.entity.EntityTemplate;
 import pers.chris.template.pojo.VOTemplate;
 
 /**
@@ -17,5 +17,5 @@ public interface MapperTemplate {
 
     MapperTemplate INSTANCE = Mappers.getMapper(MapperTemplate.class);
 
-    VOTemplate DO2VO(DOTemplate demoDO);
+    VOTemplate DO2VO(EntityTemplate demoDO);
 }

@@ -24,6 +24,7 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
     <dependencies>
+        <!--非 Web 项目不需要使用该依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

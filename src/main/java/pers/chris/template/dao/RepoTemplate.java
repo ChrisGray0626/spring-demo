@@ -2,7 +2,7 @@ package pers.chris.template.dao;
 
 import org.springframework.stereotype.Repository;
 import pers.chris.template.common.base.BaseRepo;
-import pers.chris.template.pojo.DOTemplate;
+import pers.chris.template.pojo.entity.EntityTemplate;
 
 /**
  * @Author Chris
@@ -11,5 +11,5 @@ import pers.chris.template.pojo.DOTemplate;
  */
 
 @Repository
-public interface RepoTemplate extends BaseRepo<DOTemplate> {
+public interface RepoTemplate extends BaseRepo<EntityTemplate> {
 }

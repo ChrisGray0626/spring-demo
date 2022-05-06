@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pers.chris.template.common.base.BaseController;
 import pers.chris.template.dao.RepoTemplate;
-import pers.chris.template.pojo.DOTemplate;
+import pers.chris.template.pojo.entity.EntityTemplate;
 import pers.chris.template.service.ServiceTemplate;
 
 /**
@@ -17,5 +17,5 @@ import pers.chris.template.service.ServiceTemplate;
 @Api(tags = "Template")
 @RequestMapping("/template")
 @RestController
-public class ControllerTemplate extends BaseController<DOTemplate, RepoTemplate, ServiceTemplate> {
+public class ControllerTemplate extends BaseController<EntityTemplate, RepoTemplate, ServiceTemplate> {
 }

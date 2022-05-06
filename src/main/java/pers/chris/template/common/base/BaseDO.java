@@ -38,5 +38,5 @@ public abstract class BaseDO implements Serializable {
     private LocalDateTime updateTime;
     @ApiModelProperty("删除状态")
     @Column(columnDefinition = "boolean DEFAULT false")
-    private boolean isDeleted;
+    private Boolean isDeleted;
 }

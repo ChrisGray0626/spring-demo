@@ -2,6 +2,7 @@ package pers.chris.template.common.response;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -18,13 +19,15 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
  * @Description 统一返回值处理
  */
 
-// 排除swagger
-@RestControllerAdvice(basePackages = "pers.chris")
+@RestControllerAdvice(basePackages = "pers.chris") // 排除swagger
 public class GlobalResponseAdvice implements ResponseBodyAdvice<Object> {
-    @Autowired
+
+    @Resource
     private ObjectMapper objectMapper;
 
-    // 开启功能
+    /**
+     * 开启功能
+     */
     @Override
     public boolean supports(MethodParameter methodParameter, Class<? extends HttpMessageConverter<?>> aClass) {
         return true;
