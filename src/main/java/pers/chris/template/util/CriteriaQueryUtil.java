@@ -5,9 +5,11 @@ import java.util.List;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.data.jpa.domain.Specification;
 import pers.chris.template.common.base.BaseEntity;
-import pers.chris.template.common.wrapper.CriteriaQueryWrapper;
+import pers.chris.template.common.type.QueryOperationTypeEnum;
 
 /**
  * @Author Chris
@@ -55,5 +57,14 @@ public class CriteriaQueryUtil {
             }
         }
         return predicates;
+    }
+
+    @Data
+    @AllArgsConstructor
+    public static class CriteriaQueryWrapper {
+
+        private String fieldName;
+        private Object fieldValue;
+        private QueryOperationTypeEnum queryOperationType;
     }
 }
