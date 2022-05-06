@@ -1,14 +1,13 @@
 package pers.chris.template.util;
 
-import org.springframework.data.jpa.domain.Specification;
-import pers.chris.template.common.base.BaseDO;
-import pers.chris.template.common.wrapper.CriteriaQueryWrapper;
-
+import java.util.LinkedList;
+import java.util.List;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import java.util.LinkedList;
-import java.util.List;
+import org.springframework.data.jpa.domain.Specification;
+import pers.chris.template.common.base.BaseDO;
+import pers.chris.template.common.wrapper.CriteriaQueryWrapper;
 
 /**
  * @Author Chris

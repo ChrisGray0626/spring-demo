@@ -1,13 +1,12 @@
 package pers.chris.template;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 import springfox.documentation.oas.annotations.EnableOpenApi;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 /**
  * @Author Chris

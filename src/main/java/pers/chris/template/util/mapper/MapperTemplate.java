@@ -3,8 +3,9 @@ package pers.chris.template.util.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import pers.chris.template.pojo.entity.EntityTemplate;
+import pers.chris.template.pojo.DTOTemplate;
 import pers.chris.template.pojo.VOTemplate;
+import pers.chris.template.pojo.entity.EntityTemplate;
 
 /**
  * @Author Chris
@@ -17,5 +18,6 @@ public interface MapperTemplate {
 
     MapperTemplate INSTANCE = Mappers.getMapper(MapperTemplate.class);
 
-    VOTemplate DO2VO(EntityTemplate demoDO);
+    VOTemplate Entity2VO(EntityTemplate entity);
+    EntityTemplate DTO2Entity(DTOTemplate dto);
 }
