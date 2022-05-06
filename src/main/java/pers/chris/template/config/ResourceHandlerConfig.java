@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Description 静态资源映射
  */
 @Configuration
-public class ResourceHandlerConfigurer implements WebMvcConfigurer {
+public class ResourceHandlerConfig implements WebMvcConfigurer {
 
     @Value("${resource.url-prefix}")
     private String urlPrefix;

@@ -1,6 +1,7 @@
 package pers.chris.template.common.base;
 
 import io.swagger.annotations.ApiOperation;
+import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pers.chris.template.common.response.Response;
@@ -12,7 +13,7 @@ import pers.chris.template.common.response.Response;
  */
 public abstract class BaseController<T extends BaseDO, Repo extends BaseRepo<T>, Service extends BaseService<T, Repo>> {
 
-    @Autowired
+    @Resource
     protected Service service;
 
     @ApiOperation("新增")

@@ -22,7 +22,7 @@ import static java.util.Collections.singletonList;
 /**
  * @Author Chris
  * @Date 2022/3/10 1:19 PM
- * @Description Swagger配置
+ * @Description Swagger 配置
  */
 
 @Configuration
@@ -38,6 +38,7 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build()
                 // 文档添加token验证
+                // TODO List
                 .securityContexts(List.of(securityContext()))
                 .securitySchemes(List.of(new ApiKey("authorization", "authorization", "header")));
 
