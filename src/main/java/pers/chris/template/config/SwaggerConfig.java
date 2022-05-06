@@ -1,6 +1,9 @@
 package pers.chris.template.config;
 
 import io.swagger.annotations.ApiOperation;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -17,7 +20,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.List;
 
-import static java.util.Collections.singletonList;
 
 /**
  * @Author Chris
@@ -38,9 +40,8 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build()
                 // 文档添加token验证
-                // TODO List
-                .securityContexts(List.of(securityContext()))
-                .securitySchemes(List.of(new ApiKey("authorization", "authorization", "header")));
+                .securityContexts(Collections.singletonList(securityContext()))
+                .securitySchemes(Collections.singletonList(new ApiKey("authorization", "authorization", "header")));
 
     }
 
@@ -55,14 +56,14 @@ public class SwaggerConfig {
                 = new AuthorizationScope("global", "accessEverything");
         AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
         authorizationScopes[0] = authorizationScope;
-        return singletonList(
+        return Collections.singletonList(
                 new SecurityReference("authorization", authorizationScopes));
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("XX系统")
-                .description("API文档")
+                .title("{name}系统")
+                .description("API 文档")
                 .version("1.0")
                 .build();
     }
