@@ -5,7 +5,7 @@ import javax.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import pers.chris.template.annotation.AnnotationTemplate;
-import pers.chris.template.common.base.BaseDO;
+import pers.chris.template.common.base.BaseEntity;
 
 /**
  * @Author Chris
@@ -17,7 +17,7 @@ import pers.chris.template.common.base.BaseDO;
 @Table(name = "entity_table")
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class EntityTemplate extends BaseDO {
+public class EntityTemplate extends BaseEntity {
 
     @AnnotationTemplate
     private String name;

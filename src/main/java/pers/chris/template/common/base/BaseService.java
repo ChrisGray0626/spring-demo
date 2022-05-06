@@ -10,7 +10,7 @@ import org.springframework.data.domain.PageRequest;
  * @Date 2022/3/10 11:53 AM
  * @Description 通用Service
  */
-public abstract class BaseService<T extends BaseDO, Repo extends BaseRepo<T>> {
+public abstract class BaseService<T extends BaseEntity, Repo extends BaseRepo<T>> {
 
     @Resource
     protected Repo repo;

@@ -6,7 +6,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import org.springframework.data.jpa.domain.Specification;
-import pers.chris.template.common.base.BaseDO;
+import pers.chris.template.common.base.BaseEntity;
 import pers.chris.template.common.wrapper.CriteriaQueryWrapper;
 
 /**
@@ -18,7 +18,7 @@ public class CriteriaQueryUtil {
 
     private CriteriaQueryUtil() {};
 
-    public static Specification<? extends BaseDO> build(List<CriteriaQueryWrapper> queryWrappers) {
+    public static Specification<? extends BaseEntity> build(List<CriteriaQueryWrapper> queryWrappers) {
 
         return (root, query, builder) -> {
             List<Predicate> predicates = build(queryWrappers, root, builder);
@@ -27,7 +27,7 @@ public class CriteriaQueryUtil {
     }
 
     public static List<Predicate> build(List<CriteriaQueryWrapper> queryWrappers,
-                                        Root<? extends BaseDO> root, CriteriaBuilder builder) {
+                                        Root<? extends BaseEntity> root, CriteriaBuilder builder) {
         List<Predicate> predicates = new LinkedList<>();
         for (CriteriaQueryWrapper wrapper: queryWrappers) {
             String fieldName = wrapper.getFieldName();

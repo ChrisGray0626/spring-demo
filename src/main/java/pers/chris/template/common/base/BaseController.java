@@ -15,7 +15,7 @@ import pers.chris.template.common.response.Response;
  * @Date 2022/3/10 1:19 PM
  * @Description 通用Controller
  */
-public abstract class BaseController<T extends BaseDO, Repo extends BaseRepo<T>, Service extends BaseService<T, Repo>> {
+public abstract class BaseController<T extends BaseEntity, Repo extends BaseRepo<T>, Service extends BaseService<T, Repo>> {
 
     @Resource
     protected Service service;

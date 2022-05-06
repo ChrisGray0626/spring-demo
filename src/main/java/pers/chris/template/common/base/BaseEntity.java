@@ -27,7 +27,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners(AuditingEntityListener.class)
 @Where(clause = "is_deleted!=true")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public abstract class BaseDO implements Serializable {
+public abstract class BaseEntity implements Serializable {
 
     @Id
     @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
