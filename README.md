@@ -6,7 +6,14 @@
 
 - 持久层：JPA
 
-- 集成依赖：swagger、lombok、mapstruct、snakeyaml
+## 集成依赖
+
+- swagger
+- lombok
+- mapstruct
+- snakeyaml
+- commons-lang3
+- hutool
 
 # 功能描述
 
