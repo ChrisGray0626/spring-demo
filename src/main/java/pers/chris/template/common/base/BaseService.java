@@ -1,7 +1,7 @@
 package pers.chris.template.common.base;
 
 import java.util.List;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
@@ -10,9 +10,10 @@ import org.springframework.data.domain.PageRequest;
  * @Date 2022/3/10 11:53 AM
  * @Description 通用Service
  */
-public abstract class BaseService<T extends BaseEntity, Repo extends BaseRepo<T>> {
+public abstract class BaseService<T extends BaseEntity, Repo extends BaseDao<T>> {
 
-    @Resource
+    // TODO @Resource to @Autowired
+    @Autowired
     protected Repo repo;
 
     public T add(T t) {

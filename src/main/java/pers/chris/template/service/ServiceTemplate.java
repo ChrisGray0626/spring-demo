@@ -2,7 +2,7 @@ package pers.chris.template.service;
 
 import org.springframework.stereotype.Service;
 import pers.chris.template.common.base.BaseService;
-import pers.chris.template.dao.RepoTemplate;
+import pers.chris.template.dao.DaoTemplate;
 import pers.chris.template.pojo.entity.EntityTemplate;
 
 /**
@@ -12,5 +12,5 @@ import pers.chris.template.pojo.entity.EntityTemplate;
  */
 
 @Service
-public class ServiceTemplate extends BaseService<EntityTemplate, RepoTemplate> {
+public class ServiceTemplate extends BaseService<EntityTemplate, DaoTemplate> {
 }

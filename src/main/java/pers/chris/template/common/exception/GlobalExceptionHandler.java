@@ -1,4 +1,4 @@
-package pers.chris.template.common;
+package pers.chris.template.common.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;

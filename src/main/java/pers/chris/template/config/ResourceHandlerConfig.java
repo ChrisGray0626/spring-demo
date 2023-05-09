@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * @Author Chris
  * @Date 2022/3/10 1:19 PM
- * @Description 静态资源映射
+ * @Description 静态资源处理配置
  */
 @Configuration
 public class ResourceHandlerConfig implements WebMvcConfigurer {
@@ -22,6 +22,7 @@ public class ResourceHandlerConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(@NonNull ResourceHandlerRegistry registry) {
         try {
+            // 静态资源映射
             registry.addResourceHandler(urlPrefix + "**").addResourceLocations("file:" + pathPrefix);
         } catch (Exception e) {
             e.printStackTrace();

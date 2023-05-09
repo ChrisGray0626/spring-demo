@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @Description 通用Repository
  */
 @NoRepositoryBean
-public interface BaseRepo<T extends BaseEntity> extends JpaRepository<T, String>, JpaSpecificationExecutor<T> {
+public interface BaseDao<T extends BaseEntity> extends JpaRepository<T, String>, JpaSpecificationExecutor<T> {
 
     @Query("update #{#entityName} e set e.deleted = 1 where e.id = ?1")
     @Transactional(rollbackFor = Exception.class)

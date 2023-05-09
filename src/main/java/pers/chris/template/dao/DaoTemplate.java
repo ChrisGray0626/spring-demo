@@ -1,7 +1,7 @@
 package pers.chris.template.dao;
 
 import org.springframework.stereotype.Repository;
-import pers.chris.template.common.base.BaseRepo;
+import pers.chris.template.common.base.BaseDao;
 import pers.chris.template.pojo.entity.EntityTemplate;
 
 /**
@@ -11,7 +11,7 @@ import pers.chris.template.pojo.entity.EntityTemplate;
  */
 
 @Repository
-public interface RepoTemplate extends BaseRepo<EntityTemplate> {
+public interface DaoTemplate extends BaseDao<EntityTemplate> {
 
-    EntityTemplate findByField(String field);
+    EntityTemplate findByName(String name);
 }

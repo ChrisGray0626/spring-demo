@@ -18,7 +18,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
  * @Description 统一返回值处理
  */
 
-@RestControllerAdvice(basePackages = "pers.chris") // 排除swagger
+@RestControllerAdvice(basePackages = "pers.chris") // 排除 swagger
 public class GlobalResponseAdvice implements ResponseBodyAdvice<Object> {
 
     @Resource

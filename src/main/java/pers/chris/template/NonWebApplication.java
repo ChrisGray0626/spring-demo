@@ -3,6 +3,7 @@ package pers.chris.template;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.WebApplicationType;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
@@ -10,11 +11,12 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  * @Date 2022/5/6
  * @Description 非 Web 项目启动类
  */
-public class NoWebApplication implements ApplicationRunner {
+@SpringBootApplication
+public class NonWebApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder()
-                .sources(NoWebApplication.class)
+                .sources(NonWebApplication.class)
                 // 指定非 web 模式
                 .web(WebApplicationType.NONE)
                 .run(args);

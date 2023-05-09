@@ -1,4 +1,4 @@
-package pers.chris.template.util;
+package pers.chris.template.annotation;
 
 import java.lang.reflect.Field;
 import pers.chris.template.annotation.AnnotationTemplate;
@@ -9,9 +9,9 @@ import pers.chris.template.pojo.entity.EntityTemplate;
  * @Date 2022/5/6
  * @Description Annotation 处理模板
  */
-public class AnnotationHandleUtilTemplate {
+public class AnnotationHandleTemplate {
 
-    private AnnotationHandleUtilTemplate() {}
+    private AnnotationHandleTemplate() {}
 
     public static void handle(EntityTemplate entity) throws IllegalAccessException {
         for (Field field: EntityTemplate.class.getDeclaredFields()) {
