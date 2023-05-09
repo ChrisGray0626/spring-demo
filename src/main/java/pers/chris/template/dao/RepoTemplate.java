@@ -12,4 +12,6 @@ import pers.chris.template.pojo.entity.EntityTemplate;
 
 @Repository
 public interface RepoTemplate extends BaseRepo<EntityTemplate> {
+
+    EntityTemplate findByField(String field);
 }
