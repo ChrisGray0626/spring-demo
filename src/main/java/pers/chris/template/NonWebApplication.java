@@ -9,14 +9,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 /**
  * @Author Chris
  * @Date 2022/5/6
- * @Description 非 Web 项目启动类
+ * @Description 非 Web 项目启动类 or 启动后的前置任务
  */
 @SpringBootApplication
-public class NonWebApplication implements ApplicationRunner {
+public class NoWebApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder()
-                .sources(NonWebApplication.class)
+                .sources(NoWebApplication.class)
                 // 指定非 web 模式
                 .web(WebApplicationType.NONE)
                 .run(args);
